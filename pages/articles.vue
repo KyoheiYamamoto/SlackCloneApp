@@ -1,5 +1,5 @@
 <template>
   <div>
-    <p>Airticles</p>
+    <p>Airticlesa</p>
   </div>
 </template>
