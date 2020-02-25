@@ -1,7 +1,7 @@
 <template>
  <div class="app-layout">
    <div class="sidebar">
-      <p>チャンネル一覧</p>
+      <p>チャンネ一覧</p>
       <p>#general</p>
       <p>#random</p>
       <p>#random</p>
