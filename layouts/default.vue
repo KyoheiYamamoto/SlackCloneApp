@@ -3,8 +3,8 @@
    <div class="sidebar">
       <p>チャンネル一覧</p>
       <p>#general</p>
-      <p>#random</p>
-      <p>#random</p>
+      <p>#oppai</p>
+      <p>#gagagaga</p>
    </div>
    <div class="main-content">
      <nuxt />
