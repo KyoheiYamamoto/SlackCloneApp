@@ -7,6 +7,7 @@
      <div class="user-name">{{ displayName  }}</div>
      <div class="message">{{ message.text }}</div>
    </div>
+   <!-- aqaaaa -->
  </div>
 </template>
 
