@@ -10,7 +10,10 @@ if (!firebase.apps.length) {
    projectId: "slack-clone-app-86e5c",
    storageBucket: "slack-clone-app-86e5c.appspot.com",
    messagingSenderId: "801490717597",
+   appId: "1:801490717597:web:111585b14c198c01c33d74",
+   measurementId: "G-9N46TTF907"
  }
+ console.log(config)
  firebase.initializeApp(config)
 }
 
