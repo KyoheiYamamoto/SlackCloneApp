@@ -8,7 +8,6 @@
    </div>
  </div>
 </template>
-
 <script>
 import Messages from '~/components/Messages.vue'
 import ChatForm from '~/components/ChatForm.vue'
