@@ -1,24 +1,26 @@
-import firebase from 'firebase/app' // firebase 全般の機能を利用するために必要
-import 'firebase/auth' // ログイン機能を使うために読み込み
-import 'firebase/firestore' // データベース機能を使うために読み込み
 
-if (!firebase.apps.length) {
- const config = {
-   apiKey: "AIzaSyCzkuJjWmbr_pGYtU6wD65U_xQVRie-NI8",
-   authDomain: "slack-clone-app-86e5c.firebaseapp.com",
-   databaseURL: "https://slack-clone-app-86e5c.firebaseio.com",
-   projectId: "slack-clone-app-86e5c",
-   storageBucket: "slack-clone-app-86e5c.appspot.com",
-   messagingSenderId: "801490717597",
-   appId: "1:801490717597:web:111585b14c198c01c33d74",
-   measurementId: "G-9N46TTF907"
- }
- console.log(config)
- firebase.initializeApp(config)
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import 'firebase/firestore'
+
+if (!firebase.apps.length)
+{
+  const config = {
+    apiKey: "AIzaSyAsA-BoCr7OBg2k3VQsB0BimA-2SErv7Z0",
+    authDomain: "slack-clone-app-9a167.firebaseapp.com",
+    databaseURL: "https://slack-clone-app-9a167.firebaseio.com",
+    projectId: "slack-clone-app-9a167",
+    storageBucket: "slack-clone-app-9a167.appspot.com",
+    messagingSenderId: "507807311455",
+    appId: "1:507807311455:web:96f379d936ce0f8b04ddea",
+    measurementId: "G-C44ZKTQSHC"
+  }
+  firebase.initializeApp(config)
 }
 
 const db = firebase.firestore()
-export {
- firebase,
- db
+export
+{
+  firebase,
+  db
 }

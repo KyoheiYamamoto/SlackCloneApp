@@ -1,22 +1,39 @@
 <template>
- <div class="app-layout">
-   <div class="sidebar">
+  <div class="app-layout">
+    <div class="sidebar">
       <p>チャンネル一覧</p>
-      <p>#general</p>
-      <p>#oppai</p>
-      <p>#gagagaga</p>
+      <p v-for="channel in channels">{{ channel.name }}</p>
       <!-- saaa -->
-   </div>
-   <div class="main-content">
-     <nuxt />
-   </div>
- </div>
+    </div>
+    <div class="main-content">
+      <nuxt />
+    </div>
+  </div>
 </template>
+<script>
+import { db } from '~/plugins/firebase';
+export default {
+  data() {
+    return {
+      channels: [],
+    };
+  },
+  mounted() {
+    db.collection('channels')
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          this.channels.push(doc.data());
+        });
+      });
+  },
+};
+</script>
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -62,24 +79,24 @@ html {
   background-color: #35495e;
 }
 .app-layout {
- display: flex;
+  display: flex;
 }
 
 .sidebar {
- width: 300px;
- background: #4A4141;
- height: 100vh;
- padding: 20px;
+  width: 300px;
+  background: #4a4141;
+  height: 100vh;
+  padding: 20px;
 }
 
 .main-content {
- width: 100%;
- background: #F1F1F1;
- height: 100vh;
+  width: 100%;
+  background: #f1f1f1;
+  height: 100vh;
 }
 
-.sidebar p{
-  color:#DDDDDD;
+.sidebar p {
+  color: #dddddd;
   padding-top: 4px;
 }
 </style>
